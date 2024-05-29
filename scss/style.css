@@ -177,15 +177,13 @@ header {
   font-size: 24px;
 }
 
-header.activeScroll1 {
-  height: 64px;
-}
-header.activeScroll1 .mainheader {
-  transform: translateY(-40px);
-}
-
-header.activeScroll2 {
-  transform: translateY(-100%);
+.search {
+  background-color: #FFF;
+  border-radius: 100px;
+  padding: 8px;
+  box-sizing: border-box;
+  height: 32px;
+  width: 32px;
 }
 
 .s_menu {
@@ -195,9 +193,9 @@ header.activeScroll2 {
   padding: 16px;
   box-sizing: border-box;
   background-color: #FFF;
-  height: 72px;
   display: flex;
   align-items: center;
+  transition: 300ms ease all;
 }
 .s_menu nav {
   overflow-x: scroll;
@@ -226,8 +224,20 @@ header.activeScroll2 {
 
 .fixedMenu {
   position: fixed;
-  top: 63px;
+  top: 0px;
   z-index: 12;
+  padding: 8px;
+}
+
+header.activeScroll1 {
+  height: 64px;
+}
+header.activeScroll1 .mainheader {
+  transform: translateY(-40px);
+}
+
+header.activeScroll2 {
+  transform: translateY(-100%);
 }
 
 @media screen and (max-width: 1050px) {

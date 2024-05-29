@@ -17,9 +17,9 @@ $(document).ready(function(){
             
     
             if (scroll > 50) { // Cambia este valor según cuándo quieras que se agregue la clase
-                header.addClass('activeScroll1');
+                header.addClass('activeScroll2');
             } else {
-                header.removeClass('activeScroll1');
+                header.removeClass('activeScroll2');
             }
 
         });
@@ -32,7 +32,7 @@ $(document).ready(function(){
             var menuancla = $('.s_menu');
             
     
-            if (scrollTop > 600) { // Cambia este valor según cuándo quieras que se agregue la clase
+            if (scrollTop > 670) { // Cambia este valor según cuándo quieras que se agregue la clase
                 menuancla.addClass('fixedMenu');
             } else {
                 menuancla.removeClass('fixedMenu');

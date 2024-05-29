@@ -186,20 +186,19 @@ header{
     }
 }
 
-header.activeScroll1{
-    height: 64px;
-    .mainheader{
-        transform: translateY(-40px);
-    }
-}
-
-header.activeScroll2{
-    transform: translateY(-100%);
-}
 
 
 
 // MENU ANCLA
+
+.search{
+    background-color: #FFF;
+    border-radius: 100px;
+    padding: 8px;
+    box-sizing: border-box;
+    height: 32px;
+    width: 32px;
+}
 
 .s_menu{
     width: 100%;
@@ -208,9 +207,9 @@ header.activeScroll2{
     padding: 16px;
     box-sizing: border-box;
     background-color: #FFF;
-    height: 72px;
     display: flex;
     align-items: center;
+    transition: 300ms ease all;
     nav{
         overflow-x: scroll;
         max-width: 1136px;
@@ -239,8 +238,22 @@ header.activeScroll2{
 
 .fixedMenu{
     position: fixed;
-    top: 63px;
+    top: 0px;
     z-index: 12;
+    padding: 8px;
+}
+
+
+
+header.activeScroll1{
+    height: 64px;
+    .mainheader{
+        transform: translateY(-40px);
+    }
+}
+
+header.activeScroll2{
+    transform: translateY(-100%);
 }
 
 
