@@ -223,7 +223,6 @@ header {
 }
 
 .fixedMenu {
-  position: fixed;
   top: 0px;
   z-index: 12;
   padding: 8px;
@@ -237,7 +236,7 @@ header.activeScroll1 .mainheader {
 }
 
 header.activeScroll2 {
-  transform: translateY(-100%);
+  transform: translateY(-104px);
 }
 
 @media screen and (max-width: 1050px) {

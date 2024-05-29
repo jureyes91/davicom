@@ -1,5 +1,23 @@
 $(document).ready(function(){
 
+    // VARIABLES GLOBALES
+
+    var lastScroll = $(window).scrollTop();
+    var header = $('header');
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        
+        if (lastScroll - scroll >= 0) { 
+            header.removeClass('activeScroll2');
+        }else{
+            header.addClass('activeScroll2');
+        }
+        // Actualizar la posición del scroll
+        lastScroll = scroll;
+    });
+    
+
     // MENU MOBILE
 
     function menuMobile(){
@@ -9,41 +27,41 @@ $(document).ready(function(){
     }
 
     // SCROLL MENU
-    function scrollMenu(){
-        $(window).scroll(function() {
-            var scroll = $(window).scrollTop();
-            var header = $('header');
-            var subheader = $('.subheader');
-            
-    
-            if (scroll > 50) { // Cambia este valor según cuándo quieras que se agregue la clase
-                header.addClass('activeScroll2');
-            } else {
-                header.removeClass('activeScroll2');
-            }
+    //function scrollMenu(){
 
-        });
-    }
+        
+    //}
 
     // SCROLL MENU ANCLA
     function scrollMenuAncla(){
+        
+        var menuancla = $('.s_menu');
+        var contentToMove = menuancla.html();
+        var isContentAppended = false;
+
         $(window).scroll(function() {
             var scrollTop = $(window).scrollTop();
-            var menuancla = $('.s_menu');
             
-    
-            if (scrollTop > 670) { // Cambia este valor según cuándo quieras que se agregue la clase
-                menuancla.addClass('fixedMenu');
-            } else {
-                menuancla.removeClass('fixedMenu');
+            if (scrollTop > 670 && !isContentAppended) {
+                $('header').append('<div class="s_menu fixedMenu">' + contentToMove + '</div>');
+                menuancla.hide();
+                isContentAppended = true;
+            } else if (scrollTop <= 670 && isContentAppended) {
+                $('.fixedMenu').remove();
+                menuancla.show();
+                isContentAppended = false;
             }
-
         });
     }
+
+    // Seleccionar el contenido de la clase 'source'
+    
+            
+    // Inyectar el contenido en la clase 'destination'
+    
  
 
     menuMobile();
-    scrollMenu();
     scrollMenuAncla();
 
 });
