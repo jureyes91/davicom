@@ -9,7 +9,7 @@ $(document).ready(function(){
     }
 
     // SCROLL MENU
-    function scrollColor(){
+    function scrollMenu(){
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             var header = $('header');
@@ -21,11 +21,30 @@ $(document).ready(function(){
             } else {
                 header.removeClass('activeScroll1');
             }
+
         });
     }
 
+    // SCROLL MENU ANCLA
+    function scrollMenuAncla(){
+        $(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var menuancla = $('.s_menu');
+            
+    
+            if (scrollTop > 600) { // Cambia este valor según cuándo quieras que se agregue la clase
+                menuancla.addClass('fixedMenu');
+            } else {
+                menuancla.removeClass('fixedMenu');
+            }
+
+        });
+    }
+ 
+
     menuMobile();
-    scrollColor();
+    scrollMenu();
+    scrollMenuAncla();
 
 });
 
