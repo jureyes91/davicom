@@ -1,6 +1,12 @@
 $(document).ready(function(){
 
+    // MENU MOBILE
 
+    function menuMobile(){
+        $(".menu_mobile").click(function(){
+            $('.navbar').toggleClass("activeMobile");
+        });
+    }
 
     // SCROLL MENU
     function scrollColor(){
@@ -16,7 +22,8 @@ $(document).ready(function(){
         });
     }
 
+    menuMobile();
     scrollColor();
-    
+
 });
 
