@@ -12,12 +12,14 @@ $(document).ready(function(){
     function scrollColor(){
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
-            var elemento = $('header');
+            var header = $('header');
+            var subheader = $('.subheader');
+            
     
             if (scroll > 50) { // Cambia este valor según cuándo quieras que se agregue la clase
-                elemento.addClass('activeScroll');
+                header.addClass('activeScroll1');
             } else {
-                elemento.removeClass('activeScroll');
+                header.removeClass('activeScroll1');
             }
         });
     }

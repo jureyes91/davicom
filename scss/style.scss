@@ -25,24 +25,24 @@ body{
 }
 
 header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    transition: 300ms ease all;   
+}
+
+.mainheader{
     background: linear-gradient(90deg, #870412, #E1111C);
-    padding: 16px;
     box-sizing: border-box;
     height: 64px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
     transition: 300ms ease all;
-    &.active_scroll{
-        background: #FFF!important;
-        .navbar .nav_links a{
-            color: #000!important;
-        }
-    }
+
+
 }
 .center{
     text-align: center;
@@ -94,6 +94,49 @@ header{
 // HEADER
 
 
+.subheader{
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color_light);
+    width: 100%;
+    z-index: 11;
+    height: 40px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    .cont_subheader{
+        max-width: 1136px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    ul{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        list-style: none;
+        margin: 0;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+.nav_subheader{
+    display: flex;
+    align-items: center;
+    a{
+        color: #404040;
+        &.active{
+            color: var(--color_pri);
+            font-weight: 600;
+        }
+    }
+}
 
 .cont_header{
     display: flex;
@@ -102,6 +145,7 @@ header{
     width: 100%;
     max-width: 1136px;
 }
+
 .main_logo{
     a{
         display: flex;
@@ -136,6 +180,22 @@ header{
     
 }
 
+.icon_btn{
+    span{
+        font-size: 24px;
+    }
+}
+
+header.activeScroll1{
+    
+    .mainheader{
+        transform: translateY(-40px);
+    }
+}
+
+header.activeScroll2{
+    transform: translateY(-100%);
+}
 
 
 @media screen and (max-width:1050px){
