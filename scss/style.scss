@@ -12,7 +12,19 @@
     scroll-behavior: smooth;
     color: var(--txt_color_dark);
 
-} 
+}
+
+h1{
+    font-size: 48px;
+    margin: 0;
+    color: #1D1D1D;
+    line-height: 1;
+}
+.p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 .container{
     max-width: 1136px;
     margin: 0 auto;
@@ -256,6 +268,56 @@ header.activeScroll2{
 }
 
 
+
+// HERO SECTION
+
+.section_hero{
+    padding: 124px 16px 16px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+.cont_hero{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+    .info{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+.divider_red{
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #E1111C;
+}
+
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    a{
+        color: #6E6E6E;
+        font-size: 12px;
+        display: inline-block;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+        &.active{
+            color: #404040;
+            font-weight: 600;
+        }
+    }
+    span.fas{
+        font-size: 14px;
+    }
+}
 
 @media screen and (max-width:1050px){
     .menu_mobile{

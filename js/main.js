@@ -42,11 +42,11 @@ $(document).ready(function(){
         $(window).scroll(function() {
             var scrollTop = $(window).scrollTop();
             
-            if (scrollTop > 670 && !isContentAppended) {
+            if (scrollTop > 700 && !isContentAppended) {
                 $('header').append('<div class="s_menu fixedMenu">' + contentToMove + '</div>');
                 menuancla.hide();
                 isContentAppended = true;
-            } else if (scrollTop <= 670 && isContentAppended) {
+            } else if (scrollTop <= 700 && isContentAppended) {
                 $('.fixedMenu').remove();
                 menuancla.show();
                 isContentAppended = false;
